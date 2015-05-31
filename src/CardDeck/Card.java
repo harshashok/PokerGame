@@ -9,41 +9,56 @@ public class Card implements ICard {
     private final Rank rank;
     private final Suit suit;
 
+    private final String handNotation;
+    private final String pokerNotation;
+    private final String stringNotation;
+
+
     public Card() {
-        this.rank = new Rank();
-        this.suit = new Suit();
+        this(new Rank(Ranks.ACE), new Suit(Suits.SPADES));
     }
 
     public Card(Rank rank, Suit suit) {
         this.rank = rank;
         this.suit = suit;
+
+        handNotation = "" + getRank() + getSuit();
+        pokerNotation = "" + this.rank.getRank()+getIcon();
+        stringNotation = "";
     }
 
     public String getColor() {
-        return null;
+        return ""+suit.getColor();
     }
 
     public String getSuit() {
-        return null;
+        return ""+this.suit.getSuit();
     }
 
     public String getIcon() {
-        return null;
+
+        switch(this.suit.getSuit()){
+
+            case Suits.CLUBS : return ""+Suits.I_CLUBS;
+            case Suits.DIAMOND: return ""+Suits.I_DIAMONDS;
+            case Suits.HEARTS: return ""+Suits.I_HEARTS;
+            default: return ""+Suits.I_SPADES;
+        }
     }
 
     public String getRank() {
-        return null;
+        return ""+rank.getRank();
     }
 
     public String getStringNotation() {
-        return null;
+        return this.stringNotation;
     }
 
     public String getHandNotation() {
-        return null;
+        return this.handNotation;
     }
 
     public String getPokerNotation() {
-        return null;
+        return this.pokerNotation;
     }
 }

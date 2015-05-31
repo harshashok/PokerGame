@@ -17,6 +17,12 @@ public class Suits {
     public static final char RED = 'R';
     public static final char BLACK = 'B';
 
+    public static final char I_CLUBS = '?';
+    public static final char I_DIAMONDS = '?';
+    public static final char I_HEARTS = '?';
+    public static final char I_SPADES = '?';
+
+
 
     public static String getAllSuits() {
         return Suits.allSuits;

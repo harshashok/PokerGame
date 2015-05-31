@@ -29,11 +29,11 @@ public class Suit {
     }
 
     public char getSuit(){
-        return suit;
+        return this.suit;
     }
 
     public char getColor() {
-        return color;
+        return this.color;
     }
-    
+
 }
