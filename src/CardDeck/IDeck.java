@@ -13,5 +13,4 @@ public interface IDeck {
 
     public void discard(Card card);
 
-
 }

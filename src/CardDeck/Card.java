@@ -24,7 +24,7 @@ public class Card implements ICard {
 
         handNotation = "" + getRank() + getSuit();
         pokerNotation = "" + this.rank.getRank()+getIcon();
-        stringNotation = "";
+        stringNotation = buildStringNotation();
     }
 
     public String getColor() {
@@ -60,5 +60,39 @@ public class Card implements ICard {
 
     public String getPokerNotation() {
         return this.pokerNotation;
+    }
+
+    private String buildStringNotation() {
+        return buildRankString(this.rank) + " of "+buildSuitString(this.suit);
+    }
+
+    private String buildSuitString(Suit s){
+
+        switch(s.getSuit()){
+            case Suits.CLUBS : return "CLUBS";
+            case Suits.DIAMOND : return "DIAMOND";
+            case Suits.HEARTS: return "HEARTS";
+            default : return "SPADES";
+        }
+    }
+
+    private String buildRankString(Rank r){
+
+        switch(r.getRank()){
+
+            case Ranks.TWO : return "2";
+            case Ranks.THREE : return "3";
+            case Ranks.FOUR : return "4";
+            case Ranks.FIVE : return "5";
+            case Ranks.SIX : return "6";
+            case Ranks.SEVEN : return "7";
+            case Ranks.EIGHT : return "8";
+            case Ranks.NINE : return "9";
+            case Ranks.TEN : return "10";
+            case Ranks.JACK : return "JACK";
+            case Ranks.QUEEN : return "QUEEN";
+            case Ranks.KING : return "KING";
+            default : return "ACE";
+        }
     }
 }

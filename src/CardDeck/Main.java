@@ -29,10 +29,16 @@ public class Main {
         System.out.println(deck.drawTopCard().getHandNotation());
         System.out.println(deck.drawTopCard().getHandNotation());
         System.out.println(deck.drawTopCard().getHandNotation());
+        System.out.println(deck.drawTopCard().getStringNotation());
         System.out.println(deck.drawTopCard().getHandNotation());
         System.out.println(deck.drawTopCard().getHandNotation());
         System.out.println(deck.drawTopCard().getHandNotation());
-        System.out.println(deck.drawTopCard().getHandNotation());
+        System.out.println(deck.getCount());
+        System.out.println(deck.drawTopCard().getStringNotation());
+        System.out.println(deck.drawTopCard().getStringNotation());
+        System.out.println(deck.drawTopCard().getStringNotation());
+        System.out.println(deck.drawTopCard().getStringNotation());
+        System.out.println(deck.drawTopCard().getStringNotation());
 
     }
 
