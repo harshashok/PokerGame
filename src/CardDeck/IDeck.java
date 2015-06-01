@@ -11,5 +11,7 @@ public interface IDeck {
 
     public int  getCount();
 
+    public void discard(Card card);
+
 
 }

@@ -5,7 +5,7 @@ package CardDeck;
  */
 public class Suits {
 
-    private static final String allSuits = "CDHS";
+    private static final String allSuits = "SDCH";
     private static final char[] allSuitsArray = allSuits.toCharArray();
 
 
